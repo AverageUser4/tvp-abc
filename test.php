@@ -15,7 +15,11 @@
 
 <body>
 
-  <div style="height:500px"></div>
+  <!-- <div style="height:100px"></div> -->
+
+  <?php 
+    echo file_get_contents('components/now-on-air.html');
+  ?>
 
 </body>
 

@@ -1,0 +1,12 @@
+@use 'var';
+
+.heading {
+  font-size: clamp(24px, 4vw, 32px);
+  line-height: 160%;
+  color: var.$light-blue;
+  font-weight: normal;
+}
+
+.heading--color-2 {
+  color: rgba(0 0 0 / 0.75);
+}
