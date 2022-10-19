@@ -1,7 +1,12 @@
 @use 'global';
 @use 'components/heading';
 @use 'components/link';
-@use 'components/horizontal-list';
+@use 'components/header-list';
+@use 'components/website-header';
+@use 'components/sliding-info';
+@use 'components/logo';
+@use 'components/socials-list';
+@use 'components/search-button';
 
 @use 'components/now-on-air';
 @use 'components/program-presentation';

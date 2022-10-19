@@ -1,0 +1,24 @@
+.socials-list {
+  display: flex;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 30px;
+  height: 30px;
+
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

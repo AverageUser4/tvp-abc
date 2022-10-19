@@ -5,5 +5,26 @@
 }
 
 .website-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 50px;
+
+  padding-right: 12px;
   max-width: var.$max-width;
+  margin: auto;
+}
+
+.website-header__left {
+  display: flex;
+  align-items: center;
+  
+  height: 100%;
+}
+
+.website-header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
