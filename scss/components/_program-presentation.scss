@@ -1,0 +1,39 @@
+@use '../var';
+
+$h: 90px;
+
+.program-presentation-content {
+  display: flex;
+
+  background-color: var.$yellow;
+}
+
+.program-presentation__image {
+  height: $h;
+  width: 160px;
+
+  // object-fit: cover;
+  object-position: center;
+}
+
+.program-presentation__text-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: $h;
+  padding: 12px;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+.program-presentation__heading {
+  max-width: 250px;
+
+  text-overflow: '...';
+  white-space: nowrap;
+  // overflow-wrap: break-word;
+  // word-break: break-word;
+}

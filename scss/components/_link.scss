@@ -8,5 +8,13 @@
 }
 
 .link--hover-effect-1 {
-  font-weight: bold;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.link--hover-effect-2 {
+  &:hover {
+    text-decoration: underline;
+  }
 }

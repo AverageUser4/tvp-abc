@@ -1,12 +1,33 @@
-@use 'var';
+@use '../var';
 
 .heading {
+  margin: 0.6em 0;
+
   font-size: clamp(24px, 4vw, 32px);
-  line-height: 160%;
-  color: var.$light-blue;
+  color: rgb(255 255 255);
   font-weight: normal;
+}
+
+.heading--small {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.heading--tiny {
+  font-size: 16px;
 }
 
 .heading--color-2 {
   color: rgba(0 0 0 / 0.75);
+}
+
+.heading--color-3 {
+  color: var.$blue;
+}
+
+.heading--no-margin {
+  margin: 0;
+}
+
+.heading--bold {
+  font-weight: bold;
 }

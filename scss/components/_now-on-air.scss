@@ -1,0 +1,25 @@
+@use '../var';
+
+.now-on-air-content {
+  display: flex;
+
+  height: 90px;
+}
+
+.now-on-air__side-element {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 16px;
+
+  width: 160px;
+  padding: 16px 32px;
+  box-sizing: border-box;
+
+  background-color: var.$green;
+}
+
+.now-on-air__side-element--background-2 {
+  background-color: var.$red;
+}

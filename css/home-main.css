@@ -4,4 +4,107 @@ body {
   background-color: #333;
 }
 
+.heading {
+  margin: 0.6em 0;
+  font-size: clamp(24px, 4vw, 32px);
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+}
+
+.heading--small {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.heading--tiny {
+  font-size: 16px;
+}
+
+.heading--color-2 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.heading--color-3 {
+  color: rgb(0, 172, 229);
+}
+
+.heading--no-margin {
+  margin: 0;
+}
+
+.heading--bold {
+  font-weight: bold;
+}
+
+.link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.link--bold {
+  font-size: bold;
+}
+
+.link--hover-effect-1:hover {
+  font-weight: bold;
+}
+
+.link--hover-effect-2:hover {
+  text-decoration: underline;
+}
+
+.horizontal-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.now-on-air-content {
+  display: flex;
+  height: 90px;
+}
+
+.now-on-air__side-element {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 160px;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  background-color: rgb(0, 184, 40);
+}
+
+.now-on-air__side-element--background-2 {
+  background-color: rgb(255, 9, 70);
+}
+
+.program-presentation-content {
+  display: flex;
+  background-color: rgb(255, 185, 0);
+}
+
+.program-presentation__image {
+  height: 90px;
+  width: 160px;
+  object-position: center;
+}
+
+.program-presentation__text-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+  padding: 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.program-presentation__heading {
+  max-width: 250px;
+  text-overflow: "...";
+  white-space: nowrap;
+}
+
 /*# sourceMappingURL=home-main.css.map */
