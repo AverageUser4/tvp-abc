@@ -18,8 +18,9 @@
 
 <body>
 
-  <h1>abc</h1>
-  <p>abc</p>
+  <?php 
+    echo file_get_contents('components/now-on-air.html')  ;
+  ?>
 
 </body>
 

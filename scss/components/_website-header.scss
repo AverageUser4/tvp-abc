@@ -1,0 +1,9 @@
+@use '../var';
+
+.website-header {
+  background-color: var.$blue;
+}
+
+.website-header-content {
+  max-width: var.$max-width;
+}

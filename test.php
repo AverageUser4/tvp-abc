@@ -21,7 +21,7 @@
   <!-- <div style="height:100px"></div> -->
 
   <?php 
-    echo file_get_contents('components/now-on-air.html');
+    echo file_get_contents('components/website-header.html');
   ?>
 
 </body>

@@ -1,8 +1,20 @@
 @use '../var';
 
+:root {
+  --side-element-width: 40px;
+  --side-element-horizontal-padding: 16px; // 32px;
+}
+
+.now-on-air {
+  background-color: white;
+  background-image: linear-gradient(90deg, var.$green 50%, var.$red 50%);
+}
+
 .now-on-air-content {
   display: flex;
 
+  max-width: var.$max-width;
+  margin: auto;
   height: 90px;
 }
 
@@ -13,13 +25,84 @@
   align-items: center;
   gap: 16px;
 
-  width: 160px;
-  padding: 16px 32px;
+  flex-shrink: 0;
+
+  width: var(--side-element-width);
+  padding: 16px var(--side-element-horizontal-padding);
   box-sizing: border-box;
 
   background-color: var.$green;
 }
-
+.now-on-air__side-element--first {
+  display: none;
+}
 .now-on-air__side-element--background-2 {
   background-color: var.$red;
+}
+
+.now-on-air__presentation-list {
+  display: flex;
+
+  flex-grow: 1;
+
+  width: calc(100% - var(--side-element-width));
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  & > li {
+    width: 100%;
+  }
+  & > li:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+.now-on-air__full-program-span {
+  display: none;
+}
+
+@media(min-width: 680px) {
+  :root {
+    --side-element-width: 160px;
+    --side-element-horizontal-padding: 32px;
+  }
+
+  .now-on-air__side-element--first {
+    display: flex;
+  }
+
+  .now-on-air__presentation-list {
+    width: calc(100% - 2 * var(--side-element-width));
+  }
+
+  .now-on-air__full-program-span {
+    display: inline;
+  }
+}
+
+@media(min-width: 900px) {
+  .now-on-air__presentation-list {
+    & > li {
+      width: 50%;
+    }
+    & > li:nth-child(n + 2) {
+      display: block;
+    }
+    & > li:nth-child(n + 3) {
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 1120px) {
+  .now-on-air__presentation-list {
+    & > li {
+      width: 33.333333%;
+    }
+    & > li:nth-child(n) {
+      display: block;
+    }
+  }
 }
