@@ -1,6 +1,22 @@
+@use 'var';
+
+:root {
+  --header-height: 50px;
+}
+
+@media(min-width: var.$mw-header-change) {
+  :root {
+    --header-height: 75px;
+  }
+}
+
 body {
   margin: 0;
 
   font-family: Quicksand, sans-serif;
+
+
+  min-height: 5000px;
   background-color: #333;
 }
+

@@ -1,6 +1,16 @@
+:root {
+  --header-height: 50px;
+}
+
+@media (min-width: 1140px) {
+  :root {
+    --header-height: 75px;
+  }
+}
 body {
   margin: 0;
   font-family: Quicksand, sans-serif;
+  min-height: 5000px;
   background-color: #333;
 }
 
@@ -53,7 +63,18 @@ body {
 }
 
 .website-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  margin-bottom: var(--header-height);
   background-color: rgb(0, 172, 229);
+  transition: 650ms ease-in-out;
+}
+
+.website-header--fancy .search-button__image path,
+.website-header--fancy .socials-list__link path {
+  transition: 650ms ease-in-out;
 }
 
 .website-header-content {
@@ -61,7 +82,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: 50px;
+  height: var(--header-height);
   padding: 0 12px;
   max-width: 1400px;
   margin: auto;
@@ -125,11 +146,22 @@ body {
   }
 }
 @media (min-width: 1140px) {
+  .website-header {
+    margin: 0;
+  }
   .website-header--fancy {
     background: transparent;
   }
-  .website-header-content {
-    height: 75px;
+  .website-header--fancy .website-header__list-link {
+    color: rgb(0, 172, 229);
+  }
+  .website-header--fancy .website-header__list-link:hover {
+    background-color: rgb(0, 172, 229);
+    color: rgb(255, 255, 255);
+  }
+  .website-header--fancy .search-button__image path,
+.website-header--fancy .socials-list__link path {
+    fill: rgb(0, 172, 229);
   }
   .website-header__list {
     position: static;
@@ -200,10 +232,18 @@ body {
 
 .logo__image-1 {
   height: 55%;
+  transition: 650ms ease-in-out;
 }
 
 .logo__image-2 {
   height: 55%;
+  transition: 650ms ease-in-out;
+}
+
+.logo__letter-a,
+.logo__letter-b,
+.logo__letter-c {
+  transition: 650ms ease-in-out;
 }
 
 .logo__letter {
@@ -217,13 +257,14 @@ body {
   .logo--fancy .logo__image-1 {
     height: 70%;
     padding: 0 12px;
-    background-color: red;
+    background-color: rgb(0, 172, 229);
   }
   .logo--fancy .logo__image-2 {
     position: absolute;
-    top: 120%;
+    top: 100%;
     left: 50%;
     height: 75%;
+    padding-top: 12px;
     transform: translateX(-50%);
   }
   .logo--fancy .logo__image-2 .logo__letter-a {
@@ -254,6 +295,42 @@ body {
 }
 .socials-list__link:hover {
   opacity: 0.7;
+}
+
+.button {
+  padding: 0.8em 4em;
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 184, 40);
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  transition: 300ms;
+}
+.button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 184, 40);
+  cursor: pointer;
+}
+
+.button--with-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.button--with-arrow:hover::before {
+  border-left-color: rgb(0, 184, 40);
+}
+.button--with-arrow::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.35em 0.5em;
+  border-color: transparent;
+  border-left-color: rgb(255, 255, 255);
+  transition: 300ms;
 }
 
 .search-button {
@@ -395,6 +472,32 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.big-introduction {
+  position: relative;
+}
+
+.big-introduction__link {
+  display: block;
+}
+
+.big-introduction__image {
+  display: block;
+  width: 100%;
+}
+
+.big-introduction__button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1140px) {
+  .big-introduction--under-header {
+    margin-top: -75px;
+  }
 }
 
 /*# sourceMappingURL=home-main.css.map */

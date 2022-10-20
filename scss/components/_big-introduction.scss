@@ -1,0 +1,28 @@
+@use '../var';
+
+.big-introduction {
+  position: relative;
+}
+
+.big-introduction__link {
+  display: block;
+}
+
+.big-introduction__image {
+  display: block;
+  width: 100%;
+}
+
+.big-introduction__button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+@media(min-width: var.$mw-header-change) {
+  .big-introduction--under-header {
+    margin-top: -75px;
+  }
+}

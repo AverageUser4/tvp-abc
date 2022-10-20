@@ -1,7 +1,25 @@
 @use '../var';
 
 .website-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  width: 100%;
+  margin-bottom: var(--header-height);
+
   background-color: var.$blue;
+
+  transition: var.$header-transition;
+}
+
+.website-header--fancy {
+  .search-button__image,
+  .socials-list__link {
+    path {
+      transition: var.$header-transition;
+    }
+  }
 }
 
 .website-header-content {
@@ -11,7 +29,7 @@
 
   position: relative;
 
-  height: 50px;
+  height: var(--header-height);
   padding: 0 12px;
   max-width: var.$max-width;
   margin: auto;
@@ -86,13 +104,29 @@
   }
 }
 
-@media(min-width: 1140px) {
-  .website-header--fancy {
-    background: transparent;
+@media(min-width: var.$mw-header-change) {
+  .website-header {
+    margin: 0;
   }
 
-  .website-header-content {
-    height: 75px;
+  .website-header--fancy {
+    background: transparent;
+
+    .website-header__list-link {
+      color: var.$blue;
+
+      &:hover {
+        background-color: var.$blue;
+        color: rgb(255 255 255);
+      }
+    }
+
+    .search-button__image,
+    .socials-list__link {
+      path {
+        fill: var.$blue;
+      }
+    }
   }
 
   .website-header__list {

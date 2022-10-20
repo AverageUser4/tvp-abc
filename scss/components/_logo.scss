@@ -10,32 +10,41 @@
 
 .logo__image-1 {
   height: 55%;
+  transition: var.$header-transition;
 }
 
 .logo__image-2 {
   height: 55%;
+  transition: var.$header-transition;
+}
+
+.logo__letter-a,
+.logo__letter-b,
+.logo__letter-c {
+  transition: var.$header-transition;
 }
 
 .logo__letter {
   fill: rgb(255 255 255);
 }
 
-@media(min-width: 1140px) {
+@media(min-width: var.$mw-header-change) {
   .logo--fancy {
     position: relative;
 
     .logo__image-1 {
       height: 70%;
       padding: 0 12px;
-      background-color: red;
+      background-color: var.$blue;
     }
 
     .logo__image-2 {
       position: absolute;
-      top: 120%;
+      top: 100%;
       left: 50%;
 
       height: 75%;
+      padding-top: 12px;
 
       transform: translateX(-50%);
 

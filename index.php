@@ -19,8 +19,62 @@
 <body>
 
   <?php 
-    echo file_get_contents('components/now-on-air.html')  ;
+    echo file_get_contents('components/now-on-air.html');
+    echo file_get_contents('components/website-header.html');
   ?>
+
+  <section class="big-introduction big-introduction--under-header">
+
+    <a class="big-introduction__link">
+      
+        <img class="big-introduction__image" src="images/misc/big-background.jpg">
+
+        <button class="big-introduction__button button button--with-arrow">Sprawdź</button>
+
+    </a>
+
+  </section>
+
+  <main>
+
+    <div class="website-content">
+
+      <div>
+
+        <section>
+  
+          <h2>Aktualności</h2>
+
+          <article class="">
+
+            <img src="images/misc/normal-article.png">
+
+            <h3><a>Henerietta zaprasza na farmę</a></h3>
+
+          </article>
+
+          <article class="info-box">
+
+            <img src="images/misc/normal-article.png">
+
+            <h3><a>Ruszyła Kraina ABC!</a></h3>
+            <h3><a>Konkurs "Warzywa i owoce"</a></h3>
+
+          </article>
+  
+        </section>
+  
+        <aside>
+  
+          <h2>Polecane</h2>
+  
+        </aside>
+
+      </div>
+
+    </div>
+
+  </main>
 
 </body>
 
