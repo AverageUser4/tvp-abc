@@ -6,6 +6,8 @@
   font-size: clamp(24px, 4vw, 32px);
   color: rgb(255 255 255);
   font-weight: normal;
+
+  transition: color 300ms;
 }
 
 .heading--small {
@@ -14,6 +16,10 @@
 
 .heading--tiny {
   font-size: 16px;
+}
+
+.heading--nano {
+  font-size: 14px;
 }
 
 .heading--big {

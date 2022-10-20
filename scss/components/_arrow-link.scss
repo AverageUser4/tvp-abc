@@ -1,0 +1,16 @@
+.arrow-link {
+  aspect-ratio: 2/3;
+  height: 1em;
+  background-image: url('../images/icons/arrow-right.svg');
+  background-size: 0.4em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  padding: 0 12px;
+
+  transition: background-position-x 300ms;
+
+  &:hover {
+    background-position-x: right;
+  }
+}

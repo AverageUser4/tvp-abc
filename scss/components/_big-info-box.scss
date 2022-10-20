@@ -47,4 +47,6 @@
 
   border-radius: var.$radius-normal;
   background-image: linear-gradient(transparent, rgb(0 0 0 / 0.5));
+
+  pointer-events: none;
 }

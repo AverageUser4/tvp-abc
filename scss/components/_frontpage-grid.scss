@@ -1,0 +1,39 @@
+@use '../var';
+
+.frontpage-grid {
+  display: flex;
+  gap: 64px;
+
+  margin-bottom: 64px;
+}
+
+.frontpage-grid-left {
+  flex-basis: 100%;
+}
+
+.frontpage-grid-left__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > * {
+    margin: 0;
+    flex: 1 1 0;
+  }
+}
+
+.frontpage-grid__right {
+  display: none;
+}
+
+@media(min-width: 580px) {
+  .frontpage-grid-left__bottom {
+    flex-direction: row;
+  }
+}
+
+@media(min-width: var.$mw-header-change) {
+  .frontpage-grid__right {
+    display: block;
+  }
+}

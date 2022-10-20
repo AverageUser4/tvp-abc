@@ -12,6 +12,17 @@
     }
   }
 }
+.info-box--interactive {
+  transition: 300ms;
+
+  &:hover {
+    transform: translateY(-10px);
+    background-color: rgb(255 255 255);
+    & * {
+      color: var.$blue;
+    }
+  }
+}
 
 .info-box__image {
   display: block;
@@ -26,5 +37,5 @@
 }
 
 .info-box__text-part {
-  padding: 16px 16px 128px;
+  padding: 16px 16px clamp(64px, 1vw, 128px);
 }

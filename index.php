@@ -39,11 +39,11 @@
 
     <div class="website-content">
 
-      <div>
+      <div class="frontpage-grid">
 
-        <section class="news-and-recommended">
+        <section class="frontpage-grid-left">
   
-          <h2 class="heading heading--color-4 heading--with-pipe">Aktualności</h2>
+          <h2 class="heading heading--color-4 heading--with-pipe">Aktualności <a class="arrow-link"></a></h2>
 
           <article class="big-info-box">
 
@@ -59,9 +59,9 @@
 
           </article>
 
-          <div>
+          <div class="frontpage-grid-left__bottom">
 
-            <article class="info-box">
+            <article class="info-box info-box--interactive">
   
               <a class="link">
   
@@ -77,7 +77,7 @@
   
             </article>
   
-            <article class="info-box">
+            <article class="info-box info-box--interactive">
   
               <a class="link">
   
@@ -97,13 +97,104 @@
 
         </section>
   
-        <aside>
+        <aside class="frontpage-grid__right">
   
-          <h2>Polecane</h2>
+          <h2 class="heading heading--color-4 heading--with-pipe">Polecane</h2>
+
+          <ul class="recommended-list">
+
+
+            <?php 
+            
+              foreach([
+                'Uwaga casting!',
+                'Październikowy numer "Stasia"!',
+                '"Kolaski za odblaski. Bezpieczne dzieci na drodze"',
+                'Musical "Friends" w Teatrze Capitol',
+                'Mali Wielcy Odkrywcy',
+                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 3',
+                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 2',
+                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 1'
+              ] as $text) {
+                echo "
+                  <li class='recommended-list__item'>
+  
+                    <article>
+  
+                      <a class='recommended-list__link link'>
+  
+                        <img class='recommended-list__image' src='images/misc/recommended.jpg'>
+  
+                        <h4 class='heading heading--nano heading--no-margin'>$text</h4>
+  
+                      </a>
+  
+                    </article>
+  
+                  </li>  
+                ";
+              }
+
+            ?>
+            
+          </ul>
   
         </aside>
 
       </div>
+
+      <section>
+
+        <h2 class="heading heading--color-4 heading--with-pipe">Na antenie</h2>
+
+        <ul class="slide-show">
+
+<?php 
+         
+foreach([
+  'Uwaga casting!',
+  'Październikowy numer "Stasia"!',
+  '"Kolaski za odblaski. Bezpieczne dzieci na drodze"',
+  'Musical "Friends" w Teatrze Capitol',
+  // 'Mali Wielcy Odkrywcy',
+  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 3',
+  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 2',
+  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 1'
+] as $text) {
+  $str = <<<END
+  
+  <li>
+  
+  <article class="info-box info-box--interactive">
+  
+    <a class="link">
+  
+      <img class="info-box__image" src="images/misc/normal-article.png">
+  
+      <div class="info-box__text-part">
+  
+        <h3 class="heading heading--small heading--bold heading--no-margin">$text</h3>
+  
+      </div>
+      
+    </a>
+  
+  </article>
+  
+  </li>
+  
+  END;
+  
+  echo $str;
+}
+          
+?>
+
+
+        </ul>
+        
+
+      </section>
 
     </div>
 

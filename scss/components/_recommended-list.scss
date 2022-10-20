@@ -1,0 +1,43 @@
+@use '../var';
+
+.recommended-list {
+  // padding: 10px 0 0 2px;
+  padding: 0 0 0 6px;
+
+  margin: 0;
+  width: 200px;
+  flex-shrink: 0;
+
+  list-style: none;
+  background-color: var.$blue;
+  border-radius: var.$radius-normal;
+}
+
+.recommended-list__item {
+  padding: 12px 0;
+
+  &:not(&:first-of-type) {
+    border-top: 1px solid rgb(255 255 255);
+  }
+}
+
+.recommended-list__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  padding-right: 16px;
+}
+
+.recommended-list__image {
+  display: block;
+  width: 90px;
+  margin-left: -40px;
+
+  z-index: 2;
+  aspect-ratio: 9/5;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: var.$radius-normal;
+}
