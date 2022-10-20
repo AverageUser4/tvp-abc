@@ -150,41 +150,42 @@
         <ul class="slide-show">
 
 <?php 
-         
+$i = 1;
 foreach([
-  'Uwaga casting!',
-  'Październikowy numer "Stasia"!',
-  '"Kolaski za odblaski. Bezpieczne dzieci na drodze"',
-  'Musical "Friends" w Teatrze Capitol',
+  'Alice i Lewis',
+  'Wishenpoof',
+  'Tupcio Chrupcio',
+  'Super Wings: Super Lotki',
+  'Sadie Sparks',
+  'Jonasz i jego paczka',
+  'Bob Budowniczy',
+  'Świnka Peppa',
   // 'Mali Wielcy Odkrywcy',
   // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 3',
   // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 2',
   // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 1'
 ] as $text) {
   $str = <<<END
-  
-  <li>
-  
-  <article class="info-box info-box--interactive">
+
+  <li class="info-box info-box--interactive info-box--small">
   
     <a class="link">
   
-      <img class="info-box__image" src="images/misc/normal-article.png">
+      <img class="info-box__image" src="images/misc/slideshow-$i.jpg">
   
       <div class="info-box__text-part">
   
-        <h3 class="heading heading--small heading--bold heading--no-margin">$text</h3>
+        <h3 class="heading heading--nano heading--bold heading--no-margin">$text</h3>
   
       </div>
       
     </a>
   
-  </article>
-  
   </li>
   
   END;
-  
+
+  $i++;
   echo $str;
 }
           

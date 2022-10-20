@@ -6,6 +6,10 @@
   background-color: var.$blue;
   border-radius: var.$radius-normal;
 
+  flex: 1 1 0;
+
+  overflow: hidden;
+
   &:hover {
     & .big-info-box__heading {
       transform: translateY(-0.2em);
@@ -23,19 +27,37 @@
     }
   }
 }
+.info-box--small {
+  text-align: center;
+
+  .info-box__text-part {
+    padding: 12px;
+  }
+}
 
 .info-box__image {
   display: block;
 
+  height: 240px;
   width: 100%;
 
   object-fit: cover;
   object-position: center;
-  aspect-ratio: 16/9;
 
   border-radius: var.$radius-normal var.$radius-normal 0 0;
 }
 
 .info-box__text-part {
-  padding: 16px 16px clamp(64px, 1vw, 128px);
+  height: 90px;
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+@media(min-width: 820px) {
+  .info-box--small {
+    .info-box__image {
+      height: 100px;
+    }
+  }
 }
