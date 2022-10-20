@@ -16,12 +16,19 @@
   font-size: 16px;
 }
 
+.heading--big {
+  font-size: clamp(32px, 5vw, 48px);
+}
+
 .heading--color-2 {
   color: var.$blue;
 }
 
 .heading--color-3 {
   color: rgb(0 0 0);
+}
+.heading--color-4 {
+  color: var.$transparent-black;
 }
 
 .heading--no-margin {
@@ -30,4 +37,19 @@
 
 .heading--bold {
   font-weight: bold;
+}
+
+.heading--with-pipe {
+  display: flex;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 0;
+    height: 1em;
+    margin: 0.4em 0.4em 0 0;
+
+    border-left: 3px solid currentColor;
+  }
 }

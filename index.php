@@ -35,33 +35,66 @@
 
   </section>
 
-  <main>
+  <main class="main-part">
 
     <div class="website-content">
 
       <div>
 
-        <section>
+        <section class="news-and-recommended">
   
-          <h2>Aktualności</h2>
+          <h2 class="heading heading--color-4 heading--with-pipe">Aktualności</h2>
 
-          <article class="">
+          <article class="big-info-box">
 
-            <img src="images/misc/normal-article.png">
+            <a class="link">
 
-            <h3><a>Henerietta zaprasza na farmę</a></h3>
+              <img class="big-info-box__image" src="images/misc/big-article.jpg">
+  
+              <h3 class="big-info-box__heading heading heading--bold">Henerietta zaprasza na farmę</h3>
+
+            </a>
+
+            <div class="big-info-box__shadow"></div>
 
           </article>
 
-          <article class="info-box">
+          <div>
 
-            <img src="images/misc/normal-article.png">
-
-            <h3><a>Ruszyła Kraina ABC!</a></h3>
-            <h3><a>Konkurs "Warzywa i owoce"</a></h3>
-
-          </article>
+            <article class="info-box">
   
+              <a class="link">
+  
+                <img class="info-box__image" src="images/misc/normal-article-2.jpeg">
+    
+                <div class="info-box__text-part">
+  
+                  <h3 class="heading heading--small heading--bold heading--no-margin">Ruszyła Kraina ABC!</h3>
+  
+                </div>
+                
+              </a>
+  
+            </article>
+  
+            <article class="info-box">
+  
+              <a class="link">
+  
+                <img class="info-box__image" src="images/misc/normal-article.png">
+    
+                <div class="info-box__text-part">
+  
+                  <h3 class="heading heading--small heading--bold heading--no-margin">Konkurs "Warzywa i owoce"</h3>
+  
+                </div>
+                
+              </a>
+  
+            </article>
+    
+          </div>
+
         </section>
   
         <aside>

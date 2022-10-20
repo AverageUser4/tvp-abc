@@ -1,0 +1,30 @@
+@use '../var';
+
+.info-box {
+  margin: 16px 0;
+  
+  background-color: var.$blue;
+  border-radius: var.$radius-normal;
+
+  &:hover {
+    & .big-info-box__heading {
+      transform: translateY(-0.2em);
+    }
+  }
+}
+
+.info-box__image {
+  display: block;
+
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+
+  border-radius: var.$radius-normal var.$radius-normal 0 0;
+}
+
+.info-box__text-part {
+  padding: 16px 16px 128px;
+}

@@ -1,0 +1,7 @@
+@use '../var';
+
+.website-content {
+  padding: 16px;
+  max-width: var.$max-width;
+  margin: auto;
+}
