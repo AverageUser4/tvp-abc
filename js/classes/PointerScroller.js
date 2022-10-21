@@ -44,13 +44,15 @@ export default class PointerScroller {
 
   onPointerUp() {
     window.removeEventListener('pointermove', this.invokeOnPointerMove);
+    window.removeEventListener('pointerup', this.invokeOnPointerUp);
+    window.removeEventListener('pointercancel', this.invokeOnPointerUp);
 
     this.content.style.transition = '500ms';
     setTimeout(() => {
       this.content.style.transition = 'none';
     }, 500);
 
-    this.translateX += this.additionalMovement * 5;
+    this.translateX += this.additionalMovement;
 
     if(-this.translateX > this.content.scrollWidth - this.content.clientWidth)
       this.translateX = -(this.content.scrollWidth - this.content.clientWidth);

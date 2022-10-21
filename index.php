@@ -101,100 +101,43 @@
   
           <h2 class="heading heading--color-4 heading--with-pipe">Polecane</h2>
 
-          <ul class="recommended-list">
-
-
-            <?php 
-            
-              foreach([
-                'Uwaga casting!',
-                'Październikowy numer "Stasia"!',
-                '"Kolaski za odblaski. Bezpieczne dzieci na drodze"',
-                'Musical "Friends" w Teatrze Capitol',
-                'Mali Wielcy Odkrywcy',
-                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 3',
-                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 2',
-                '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 1'
-              ] as $text) {
-                echo "
-                  <li class='recommended-list__item'>
-  
-                    <article>
-  
-                      <a class='recommended-list__link link'>
-  
-                        <img class='recommended-list__image' src='images/misc/recommended.jpg'>
-  
-                        <h4 class='heading heading--nano heading--no-margin'>$text</h4>
-  
-                      </a>
-  
-                    </article>
-  
-                  </li>  
-                ";
-              }
-
-            ?>
-            
-          </ul>
+          <?php echo file_get_contents('components/template-recommended-list.html'); ?>
   
         </aside>
 
       </div>
 
-      <section>
+      <section class="standalone-section">
 
         <h2 class="heading heading--color-4 heading--with-pipe">Na antenie</h2>
 
         <div class="scroll-with-pointer" data-pointer-scroller="1">
             
-          <ul class="scroll-with-pointer-content">
-          
+          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
 
-<?php 
-$i = 1;
-foreach([
-  'Alice i Lewis',
-  'Wishenpoof',
-  'Tupcio Chrupcio',
-  'Super Wings: Super Lotki',
-  'Sadie Sparks',
-  'Jonasz i jego paczka',
-  'Bob Budowniczy',
-  'Świnka Peppa',
-  // 'Mali Wielcy Odkrywcy',
-  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 3',
-  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 2',
-  // '"Pordóże z Ambasadorką Bezpieczeństwa" cz. 1'
-] as $text) {
-  $str = <<<END
+        </div>
 
-  <li class="info-box info-box--small">
-  
-    <a href="wikipedia" class="link">
-  
-      <img class="info-box__image" src="images/misc/slideshow-$i.jpg">
-  
-      <div class="info-box__text-part">
-  
-        <h3 class="heading heading--nano heading--bold heading--no-margin">$text</h3>
-  
-      </div>
-      
-    </a>
-  
-  </li>
-  
-  END;
+      </section>
 
-  $i++;
-  echo $str;
-}
-          
-?>
+      <section class="standalone-section">
 
-          </ul>
+        <h2 class="heading heading--color-4 heading--with-pipe">Porady ABC<a class="arrow-link"></a></h2>
+
+        <div class="scroll-with-pointer" data-pointer-scroller="2">
+            
+          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
+
+        </div>
+
+      </section>
+
+      <section class="standalone-section">
+
+        <h2 class="heading heading--color-4 heading--with-pipe">ABC Poleca<a class="arrow-link"></a></h2>
+
+        <div class="scroll-with-pointer" data-pointer-scroller="3">
+            
+          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
 
         </div>
 

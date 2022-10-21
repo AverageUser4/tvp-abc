@@ -62,3 +62,15 @@
     }
   }
 }
+
+@media(min-width: 1000px) {
+  .info-box__text-part {
+    height: 130px;
+  }
+
+  .info-box--small {
+    .info-box__image {
+      height: 130px;
+    }
+  }
+}

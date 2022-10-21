@@ -1,0 +1,48 @@
+@use '../var';
+
+.high-info-box {
+  position: relative;
+  width: clamp(220px, 35vw, 260px);
+  
+  aspect-ratio: 5 / 9;
+
+  border-radius: var.$radius-normal;
+
+  overflow: hidden;
+}
+
+.high-info-box__image {
+  width: 100%;
+  height: 100%;
+
+  border-radius: var.$radius-normal;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.high-info-box__shadow {
+  position: absolute;
+  bottom: 0;
+
+  height: 65%;
+  width: 100%;
+
+  background-image: linear-gradient(transparent, rgb(0 0 0 / 0.5));
+  border-radius: var.$radius-normal;
+}
+
+.high-info-box__text-part {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+
+  padding: 16px 0;
+  width: 90%;
+
+  text-align: center;
+  border-top: 1px solid rgb(255 255 255);
+  border-bottom: 1px solid rgb(255 255 255);
+
+  transform: translateX(-50%);
+}

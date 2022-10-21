@@ -70,6 +70,10 @@ body {
   border-left: 3px solid currentColor;
 }
 
+.heading--small-line-height {
+  line-height: 110%;
+}
+
 .link {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -630,6 +634,14 @@ body {
     height: 100px;
   }
 }
+@media (min-width: 1000px) {
+  .info-box__text-part {
+    height: 130px;
+  }
+  .info-box--small .info-box__image {
+    height: 130px;
+  }
+}
 .frontpage-grid {
   display: flex;
   gap: 64px;
@@ -738,6 +750,46 @@ body {
   .scroll-with-pointer-content > * {
     flex: 0 0 calc(25% - 12px);
   }
+}
+.standalone-section {
+  margin: 64px 0;
+}
+
+.high-info-box {
+  position: relative;
+  width: clamp(220px, 35vw, 260px);
+  aspect-ratio: 5/9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.high-info-box__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.high-info-box__shadow {
+  position: absolute;
+  bottom: 0;
+  height: 65%;
+  width: 100%;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+
+.high-info-box__text-part {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  padding: 16px 0;
+  width: 90%;
+  text-align: center;
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=home-main.css.map */
