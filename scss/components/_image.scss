@@ -1,0 +1,11 @@
+@use '../var';
+
+.image {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+.image--with-radius {
+  border-radius: var.$radius-normal;
+}
