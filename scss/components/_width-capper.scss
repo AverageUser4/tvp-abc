@@ -1,0 +1,6 @@
+@use '../var';
+
+.width-capper {
+  max-width: var.$max-width;
+  margin: auto;
+}

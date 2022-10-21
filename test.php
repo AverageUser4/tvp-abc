@@ -18,25 +18,9 @@
 
 <body>
 
-  <!-- <div style="height:100px"></div> -->
+  <div style="height:100px"></div>
 
-  <article class="high-info-box">
-    
-    <a href="wikipedia" class="link">
-
-      <img class="high-info-box__image" src="images/misc/high-article.jpg">
-
-      <div class="high-info-box__shadow"></div>
-
-      <div class="high-info-box__text-part">
-
-        <h3 class="heading heading--small-line-height heading--no-margin">"Wodne Zgadywanki. Gdzie jest Peppa"</h3>
-
-      </div>
-    
-    </a>
-
-  </article>
+  <?php echo file_get_contents('components/website-footer.html'); ?>
 
 </body>
 

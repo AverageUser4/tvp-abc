@@ -113,7 +113,7 @@
 
         <div class="scroll-with-pointer" data-pointer-scroller="1">
             
-          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
+          <?php echo file_get_contents('components/template-scroll.html'); ?>
 
         </div>
 
@@ -125,7 +125,7 @@
 
         <div class="scroll-with-pointer" data-pointer-scroller="2">
             
-          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
+          <?php echo file_get_contents('components/template-scroll.html'); ?>
 
         </div>
 
@@ -137,7 +137,7 @@
 
         <div class="scroll-with-pointer" data-pointer-scroller="3">
             
-          <?php echo file_get_contents('components/template-scroll-with-pointer-content.html'); ?>
+          <?php echo file_get_contents('components/template-high-scroll.html'); ?>
 
         </div>
 
@@ -146,6 +146,8 @@
     </div>
 
   </main>
+
+  <?php echo file_get_contents('components/website-footer.html'); ?>
 
 </body>
 

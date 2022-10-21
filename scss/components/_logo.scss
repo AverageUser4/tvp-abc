@@ -8,6 +8,17 @@
   height: 100%;
 }
 
+.logo--reversed-colors {
+  .logo__image-1 {
+    padding: 0 12px;
+
+    background-color: rgb(255 255 255);
+    & * {
+      fill: var.$blue;
+    }
+  }
+}
+
 .logo__image-1 {
   height: 55%;
   transition: var.$header-transition;
