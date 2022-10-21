@@ -172,7 +172,7 @@ foreach([
 
   <li class="info-box info-box--small">
   
-    <a class="link">
+    <a href="wikipedia" class="link">
   
       <img class="info-box__image" src="images/misc/slideshow-$i.jpg">
   
