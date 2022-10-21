@@ -9,6 +9,7 @@
   flex: 1 1 0;
 
   overflow: hidden;
+  user-select: none;
 
   &:hover {
     & .big-info-box__heading {
@@ -17,7 +18,7 @@
   }
 }
 .info-box--interactive {
-  transition: 300ms;
+  transition: transform 300ms;
 
   &:hover {
     transform: translateY(-10px);

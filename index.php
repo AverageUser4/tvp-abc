@@ -147,7 +147,10 @@
 
         <h2 class="heading heading--color-4 heading--with-pipe">Na antenie</h2>
 
-        <ul class="slide-show">
+        <div class="scroll-with-pointer" data-pointer-scroller="1">
+            
+          <ul class="scroll-with-pointer-content">
+          
 
 <?php 
 $i = 1;
@@ -167,7 +170,7 @@ foreach([
 ] as $text) {
   $str = <<<END
 
-  <li class="info-box info-box--interactive info-box--small">
+  <li class="info-box info-box--small">
   
     <a class="link">
   
@@ -191,9 +194,9 @@ foreach([
           
 ?>
 
+          </ul>
 
-        </ul>
-        
+        </div>
 
       </section>
 

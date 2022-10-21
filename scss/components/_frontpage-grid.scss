@@ -4,7 +4,7 @@
   display: flex;
   gap: 64px;
 
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .frontpage-grid-left {
@@ -18,7 +18,8 @@
 
   & > * {
     margin: 0;
-    flex: 1 1 0;
+    // flex: 1 1 0;
+    flex-basis: auto;
   }
 }
 
@@ -29,6 +30,12 @@
 @media(min-width: 580px) {
   .frontpage-grid-left__bottom {
     flex-direction: row;
+  }
+}
+
+@media(min-width: 800px) {
+  .frontpage-grid {
+    margin-bottom: 64px;
   }
 }
 

@@ -1,0 +1,28 @@
+.scroll-with-pointer {
+  overflow: hidden;
+}
+
+.scroll-with-pointer-content {
+  display: flex;
+  gap: 16px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  & > * {
+    margin: 0;
+
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+@media(min-width: 820px) {
+  .scroll-with-pointer-content {
+    & > * {
+      // gap * (items - 1) / 4 ___ 16 * 3 / 4 = 12
+      flex: 0 0 calc(25% - 12px);
+    }
+  }
+}
