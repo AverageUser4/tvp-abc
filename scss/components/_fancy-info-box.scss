@@ -1,0 +1,49 @@
+@use '../var';
+
+.fancy-info-box {
+  position: relative;
+
+  margin: clamp(16px, 3vw, 32px) 0;
+
+  &:hover {
+    .fancy-info-box__text {
+      transform: translateX(-10%);
+      background-color: rgb(255 255 255);
+      color: var.$blue;
+    }
+  }
+}
+
+.fancy-info-box__image {
+  display: block;
+
+  width: 50%;
+
+  border-radius: var.$radius-normal;
+
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+}
+
+.fancy-info-box__text {
+  position: absolute;
+  top: 15%;
+  right: 0;
+
+  width: 58%;
+  height: 70%;
+  padding: 0.5em;
+
+  background-color: var.$blue;
+  border-radius: var.$radius-normal;
+
+  box-sizing: border-box;
+  transition: 300ms;
+}
+
+@media(min-width: 500px) {
+  .fancy-info-box__text {
+    padding: 16px;
+  }
+}

@@ -7,9 +7,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nasze programy | TVP ABC</title>
-  <link rel="stylesheet" href="css/nasze-programy-main.css">
-  <script type="module" src="js/nasze-programy-main.js"></script>
+  <title>Porady | TVP ABC</title>
+  <link rel="stylesheet" href="css/porady-abc-main.css">
+  <script type="module" src="js/porady-abc-main.js"></script>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -24,28 +24,18 @@
 
   <main class="main-part main-part--pushed-background-image">
 
-    <div class="website-content website-content--medium">
+    <div class="website-content website-content--thin">
 
-      <h1 class="heading heading--color-2 heading--small-to-big">Nasze programy</h1>
+      <h1 class="heading heading--color-2 heading--small-to-big">Porady ABC</h1>
 
-      <a class="background-blur-effect link">
+      <ul class="horizontal-list">
 
-        <img class="background-blur-effect__background-image" src="images/misc/our-programs-1.jpg">
+        <li><a class="link button button--block button--thin button--color-2">e-MOCje</a></li>
+        <li><a class="link button button--block button--thin">Od niemowlaka do przedszkolaka</a></li>
+        <li><a class="link button button--block button--thin">Moda na rodzinę</a></li>
+        <li><a class="link button button--block button--thin">Porady dla rodziców</a></li>
 
-        <img class="background-blur-effect__front-image" src="images/misc/our-programs-1.jpg">
-
-        <div class="background-blur-effect__text">
-
-          <h3 class="heading heading--no-margin-top">Mrówki górują! Sekretne życie roślin</h3>
-
-          <p class="paragraph paragraph--no-margin paragraph--medium">
-            Świat przyrody, który nas otacza, kryje wiele tajemnic.
-            Rozejrzymy się wokół, by odkryć przed widzem rzeczy proste i niezwykłe zarazem.
-          </p>
-
-        </div>
-
-      </a>
+      </ul>
       
       <section class="standalone-section">
 
@@ -59,6 +49,8 @@
 
           <span class="pagination__button pagination__button--inactive">1</span>
           <a class="pagination__button">2</a>
+          <a class="pagination__button">3</a>
+          <a class="pagination__button">4</a>
           <a class="pagination__button  pagination__arrow-button"></a>
 
         </div>

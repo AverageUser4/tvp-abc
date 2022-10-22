@@ -5,22 +5,56 @@
   justify-content: center;
 
   margin-top: 48px;
+}
 
-  & > :first-child {
-    border-radius: var.$radius-small 0 0 var.$radius-small ;
+.pagination__button {
+  padding: 0.5em 0.8em;
+
+  border-radius: 0;
+  border: 1px solid rgb(217 217 217);
+  color: rgb(110 110 110);
+  background-color: rgb(255 255 255);
+  text-decoration: none;
+
+  transition: 300ms;
+
+  &:hover {
+    color: rgb(255 255 255);
+    background-color: var.$blue;
   }
 
-  & > :not(:first-child, :last-child) {
-    border-left: none;
+  &:first-child {
+    border-radius: var.$radius-small 0 0 var.$radius-small;
     border-right: none;
   }
 
-  & > :last-child {
+  &:not(:first-child, :last-child) {
+    border-right: none;
+  }
+
+  &:last-child {
     border-radius: 0 var.$radius-small var.$radius-small 0;
   }
 }
 
-.button--only-arrow {
+.pagination__button--inactive {
+  color: rgb(255 255 255);
+  background-color: var.$blue;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.pagination__button--unusable {
+  &:hover {
+    color: rgb(110 110 110);
+    background-color: rgb(255 255 255);
+    cursor: default;
+  }
+}
+
+.pagination__arrow-button {
   position: relative;
   width: 42px;
   box-sizing: border-box;
@@ -50,33 +84,4 @@
       border-left-color: rgb(255 255 255);
     }
   }
-}
-
-.button--square {
-  padding: 0.5em 0.8em;
-  border-radius: 0;
-}
-
-.button--type-2 {
-  border: 1px solid rgb(217 217 217);
-  font-weight: normal;
-}
-
-.button--color-2 {
-  color: rgb(110 110 110);
-  background-color: rgb(255 255 255);
-  
-  &:hover {
-    color: rgb(255 255 255);
-    background-color: var.$blue;
-  }
-}
-
-.button--color-3 {
-  color: rgb(255 255 255);
-  background-color: var.$blue;
-}
-
-.button--inactive {
-  pointer-events: none;
 }

@@ -47,7 +47,10 @@
     right: 0;
   
     width: 30%;
-  
+    max-height: 65%;
+
+    overflow: auto;
+
     border-radius: var.$radius-normal 0 0 var.$radius-normal;
   }
 }

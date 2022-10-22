@@ -454,19 +454,6 @@ body {
   width: 100%;
 }
 
-.paragraph {
-  font-size: clamp(14px, 3vw, 20px);
-  margin: 0.2em 0;
-}
-
-.paragraph--medium {
-  font-size: clamp(14px, 3vw, 16px);
-}
-
-.paragraph--no-margin {
-  margin: 0;
-}
-
 .main-part {
   background-color: rgb(255, 255, 255);
   background-image: url("../images/misc/abc-background.svg");
@@ -588,6 +575,8 @@ body {
     bottom: 15%;
     right: 0;
     width: 30%;
+    max-height: 65%;
+    overflow: auto;
     border-radius: 10px 0 0 10px;
   }
 }
@@ -617,23 +606,51 @@ body {
   justify-content: center;
   margin-top: 48px;
 }
-.pagination > :first-child {
-  border-radius: 5px 0 0 5px;
+
+.pagination__button {
+  padding: 0.5em 0.8em;
+  border-radius: 0;
+  border: 1px solid rgb(217, 217, 217);
+  color: rgb(110, 110, 110);
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: 300ms;
 }
-.pagination > :not(:first-child, :last-child) {
-  border-left: none;
+.pagination__button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 172, 229);
+}
+.pagination__button:first-child {
+  border-radius: 5px 0 0 5px;
   border-right: none;
 }
-.pagination > :last-child {
+.pagination__button:not(:first-child, :last-child) {
+  border-right: none;
+}
+.pagination__button:last-child {
   border-radius: 0 5px 5px 0;
 }
 
-.button--only-arrow {
+.pagination__button--inactive {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 172, 229);
+}
+.pagination__button--inactive:hover {
+  cursor: default;
+}
+
+.pagination__button--unusable:hover {
+  color: rgb(110, 110, 110);
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+}
+
+.pagination__arrow-button {
   position: relative;
   width: 42px;
   box-sizing: border-box;
 }
-.button--only-arrow::before {
+.pagination__arrow-button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -648,36 +665,8 @@ body {
   transform: translate(-25%, -50%);
   transition: 300ms;
 }
-.button--only-arrow:hover::before {
+.pagination__arrow-button:hover::before {
   border-left-color: rgb(255, 255, 255);
-}
-
-.button--square {
-  padding: 0.5em 0.8em;
-  border-radius: 0;
-}
-
-.button--type-2 {
-  border: 1px solid rgb(217, 217, 217);
-  font-weight: normal;
-}
-
-.button--color-2 {
-  color: rgb(110, 110, 110);
-  background-color: rgb(255, 255, 255);
-}
-.button--color-2:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 172, 229);
-}
-
-.button--color-3 {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 172, 229);
-}
-
-.button--inactive {
-  pointer-events: none;
 }
 
 .standalone-section {
@@ -699,8 +688,6 @@ body {
   transition: 300ms;
 }
 .button:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 184, 40);
   cursor: pointer;
 }
 
@@ -722,6 +709,36 @@ body {
   border-color: transparent;
   border-left-color: rgb(255, 255, 255);
   transition: 300ms;
+}
+
+.button--thin {
+  padding: 0.8em 1em;
+}
+
+.button--hover-effect-1:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 184, 40);
+}
+
+.button--color-2 {
+  background-color: rgb(255, 185, 0);
+}
+
+.button--block {
+  display: block;
+}
+
+.paragraph {
+  font-size: clamp(14px, 3vw, 20px);
+  margin: 0.2em 0;
+}
+
+.paragraph--medium {
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+.paragraph--no-margin {
+  margin: 0;
 }
 
 /*# sourceMappingURL=nasze-programy-main.css.map */

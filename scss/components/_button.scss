@@ -13,8 +13,6 @@
   transition: 300ms;
 
   &:hover {
-    background-color: rgb(255 255 255);
-    color: var.$green;
     cursor: pointer;
   }
 }
@@ -44,4 +42,23 @@
 
     transition: 300ms;
   }
+}
+
+.button--thin {
+  padding: 0.8em 1em;
+}
+
+.button--hover-effect-1 {
+  &:hover {
+    background-color: rgb(255 255 255);
+    color: var.$green;
+  }
+}
+
+.button--color-2 {
+  background-color: var.$yellow;
+}
+
+.button--block {
+  display: block;
 }

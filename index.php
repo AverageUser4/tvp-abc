@@ -29,7 +29,7 @@
       
         <img class="big-introduction__image" src="images/misc/big-background.jpg">
 
-        <button class="big-introduction__button button button--with-arrow">Sprawdź</button>
+        <button class="big-introduction__button button button--with-arrow button--hover-effect-1">Sprawdź</button>
 
     </a>
 
