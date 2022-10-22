@@ -1,0 +1,53 @@
+@use '../var';
+
+.background-blur-effect {
+  position: relative;
+
+  display: block;
+}
+
+.background-blur-effect__background-image {
+  display: block;
+  width: 100%;
+  
+  border-radius: var.$radius-normal;
+}
+
+.background-blur-effect__front-image {
+  display: none;
+}
+
+.background-blur-effect__text {
+  padding: 16px;
+
+  border-radius: var.$radius-normal;
+  background-color: var.$red;
+}
+
+@media(min-width: 760px) {
+  .background-blur-effect__background-image {
+    filter: blur(15px);
+  }
+  
+  .background-blur-effect__front-image {
+    display: block;
+
+    position: absolute;
+    top: 7.5%;
+    left: 7.5%;
+  
+    border-radius: var.$radius-normal;
+  
+    width: 85%;
+  }
+  
+  .background-blur-effect__text {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+  
+    width: 30%;
+  
+    border-radius: var.$radius-normal 0 0 var.$radius-normal;
+  }
+}

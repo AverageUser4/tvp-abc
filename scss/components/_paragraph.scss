@@ -2,3 +2,11 @@
   font-size: clamp(14px, 3vw, 20px);
   margin: 0.2em 0;
 }
+
+.paragraph--medium {
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+.paragraph--no-margin {
+  margin: 0;
+}

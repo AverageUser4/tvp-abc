@@ -1,0 +1,82 @@
+@use '../var';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 48px;
+
+  & > :first-child {
+    border-radius: var.$radius-small 0 0 var.$radius-small ;
+  }
+
+  & > :not(:first-child, :last-child) {
+    border-left: none;
+    border-right: none;
+  }
+
+  & > :last-child {
+    border-radius: 0 var.$radius-small var.$radius-small 0;
+  }
+}
+
+.button--only-arrow {
+  position: relative;
+  width: 42px;
+  box-sizing: border-box;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 0.35em 0.5em;
+    border-color: transparent;
+    border-left-color: var.$blue;
+
+    transform: translate(-25%, -50%);
+    transition: 300ms;
+  }
+
+  &:hover {
+    &::before {
+      border-left-color: rgb(255 255 255);
+    }
+  }
+}
+
+.button--square {
+  padding: 0.5em 0.8em;
+  border-radius: 0;
+}
+
+.button--type-2 {
+  border: 1px solid rgb(217 217 217);
+  font-weight: normal;
+}
+
+.button--color-2 {
+  color: rgb(110 110 110);
+  background-color: rgb(255 255 255);
+  
+  &:hover {
+    color: rgb(255 255 255);
+    background-color: var.$blue;
+  }
+}
+
+.button--color-3 {
+  color: rgb(255 255 255);
+  background-color: var.$blue;
+}
+
+.button--inactive {
+  pointer-events: none;
+}

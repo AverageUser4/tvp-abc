@@ -52,6 +52,10 @@ body {
   margin: 0;
 }
 
+.heading--no-margin-top {
+  margin-top: 0;
+}
+
 .heading--bold {
   font-weight: bold;
 }
@@ -402,6 +406,10 @@ body {
   margin: auto;
 }
 
+.website-content--medium {
+  max-width: 1150px;
+}
+
 .website-content--thin {
   max-width: 1000px;
 }
@@ -641,6 +649,10 @@ body {
 
 .main-part--no-background-image {
   background: rgb(255, 255, 255);
+}
+
+.main-part--pushed-background-image {
+  background-position: center top 200px;
 }
 
 .big-info-box {
